@@ -1,0 +1,34 @@
+---
+homebrew_taps:
+  - homebrew/dupes
+  - caskroom/cask
+  - caskroom/fonts
+  - neovim/neovim
+homebrew_packages:
+  - ctags
+  - curl
+  - emojify
+  - git
+  - ghq
+  - { name: gnu-sed, install_options: with-default-names }
+  - go
+  - heroku
+  - jq
+  - nkf
+  - node
+  - less
+  - mas
+  - neovim
+  - peco
+  - python
+  - python3
+  - reattach-to-user-namespace
+  - ruby
+  - sshrc
+  - terminal-notifier
+  - the_silver_searcher
+  - tig
+  - tmux
+  - tree
+  - wget
+  - { name: zsh, install_options: disable_etcdir }

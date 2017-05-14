@@ -1,0 +1,23 @@
+---
+xdg_data_home: "{{ ansible_user_dir }}/.local/share"
+
+zplug_home: "{{ansible_env.ZPLUG_HOME | default('{}/.local/share/zplug'.format(ansible_env.HOME))}}"
+
+directories:
+  - ~/.local/share
+  - ~/.cache/zsh
+
+git_repositories:
+  - { repo: "https://github.com/rabafea/dotfiles.git", dest: "{{ xdg_data_home }}/dotfiles" }
+  - { repo: "https://github.com/rbenv/rbenv.git", dest: "{{ xdg_data_home }}/rbenv" }
+  - { repo: "https://github.com/rbenv/ruby-build.git", dest: "{{ xdg_data_home }}/rbenv/plugins/ruby-build" }
+  - { repo: "https://github.com/pyenv/pyenv.git", dest: "{{ xdg_data_home }}/pyenv" }
+  - { repo: "https://github.com/tmux-plugins/tpm", dest: "{{ xdg_data_home }}/tpm" }
+  - { repo: "https://github.com/b4b4r07/zplug", dest: "{{ xdg_data_home }}/zplug" }
+
+symlinks:
+  - { src: "{{ xdg_data_home }}/dotfiles/config", dest: "{{ ansible_user_dir }}/.config" }
+  - { src: "{{ xdg_data_home }}/dotfiles/config/zsh/.zshenv", dest: "{{ ansible_user_dir }}/.zshenv" }
+
+copy:
+  - { src: "{{ xdg_data_home }}/dotfiles/fonts/myrica/MyricaForPowerline.otf", dest: "{{ ansible_user_dir }}/Library/Fonts" }

@@ -1,0 +1,23 @@
+---
+homebrew_cask_packages:
+  - alfred
+  - android-studio
+  - appcleaner
+  - bartender
+  - bettertouchtool
+  - betterzipql
+  - cheatsheet
+  - clipy
+  - dash
+  - docker
+  - dropbox
+  - font-myrica
+  - google-chrome
+  - google-drive
+  - music-manager
+  - quicklook-csv
+  - qlmarkdown
+  - slack
+  - the-unarchiver
+  - vagrant
+  - virtualbox

@@ -1,0 +1,11 @@
+---
+- name: Setup MacOSX for work
+  hosts: localhost
+  connection: local
+  roles:
+    - { role: homebrew,      tags: [ homebrew ] }
+    - { role: env,           tags: [ env ] }
+    - { role: mac,           tags: [ mac ] }
+    - { role: pip,           tags: [ pip ] }
+    - { role: pip3,          tags: [ pip3 ] }
+    - { role: gem,           tags: [ gem ] }
