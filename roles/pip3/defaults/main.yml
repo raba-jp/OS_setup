@@ -1,4 +1,6 @@
 ---
 pip3_packages:
+  - jupyterlab
+  - widgetsnbextension
   - neovim
   - pygments

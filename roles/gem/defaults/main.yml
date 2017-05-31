@@ -2,3 +2,5 @@
 gem_packages:
   - travis
   - neovim
+  - reek
+  - rubocop

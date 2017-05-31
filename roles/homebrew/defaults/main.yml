@@ -4,12 +4,15 @@ homebrew_taps:
   - caskroom/cask
   - caskroom/fonts
   - neovim/neovim
+  - go-delve/delve
 homebrew_packages:
   - ctags
   - curl
+  - delve
   - emojify
   - git
   - ghq
+  - glide
   - { name: gnu-sed, install_options: with-default-names }
   - go
   - heroku
