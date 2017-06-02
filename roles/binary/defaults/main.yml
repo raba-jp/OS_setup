@@ -1,0 +1,15 @@
+---
+golang_version: 1.8.3
+peco_version: v0.5.1
+
+binary_install_prefix: /usr/local
+
+binary_packages:
+  - name: golang
+    download_url: https://storage.googleapis.com/golang/go{{ golang_version }}.linux-amd64.tar.gz
+    concrete_path: /usr/local/go/bin/go
+    abstract_path: /usr/local/bin/go
+  - name: peco
+    download_url: https://github.com/peco/peco/releases/download/{{ peco_version }}/peco_linux_amd64.tar.gz
+    concrete_path: /usr/local/peco/peco
+    abstract_path: /usr/local/bin/peco

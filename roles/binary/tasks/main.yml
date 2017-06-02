@@ -1,0 +1,36 @@
+---
+- name: Get binary tarball
+  get_url:
+    url: "{{ item.download_url }}"
+    dest: "/tmp/{{ item.name }}.tgz"
+  with_items: "{{ binary_packages }}"
+
+- name: Create directory
+  file:
+    path: "{{ binary_install_prefix }}"
+    state: directory
+    recurse: yes
+
+- name: Expand tarball
+  become: yes
+  unarchive:
+    copy: no
+    src: "/tmp/{{ item.name }}.tgz"
+    dest: "{{ binary_install_prefix }}"
+  with_items: "{{ binary_packages }}"
+
+- name: Remove tarball
+  file:
+    path: "/tmp/{{ item.name }}.tgz"
+    state: absent
+  with_items: "{{ binary_packages }}"
+
+- name: Copy binary
+  become: yes
+  file:
+    src: "{{ item.concrete_path }}"
+    dest: "{{ item.abstract_path }}"
+    owner: root
+    group: root
+    state: link
+  with_items: "{{ binary_packages }}"

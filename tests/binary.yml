@@ -1,0 +1,6 @@
+---
+- name: Test binary role
+  hosts: all
+  tasks:
+    - include: '../roles/binary/tasks/main.yml'
+      static: yes
