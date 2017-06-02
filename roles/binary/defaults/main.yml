@@ -11,5 +11,5 @@ binary_packages:
     abstract_path: /usr/local/bin/go
   - name: peco
     download_url: https://github.com/peco/peco/releases/download/{{ peco_version }}/peco_linux_amd64.tar.gz
-    concrete_path: /usr/local/peco/peco
+    concrete_path: /usr/local/peco_linux_amd64/peco
     abstract_path: /usr/local/bin/peco
