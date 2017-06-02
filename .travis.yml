@@ -8,4 +8,4 @@ install:
   - pip install ansible
 script:
   - echo localhost > inventory
-  - ansible-playbook -i inventory --syntax-check --list-tasks tests/golang.yml
+  - ansible-playbook -i inventory --syntax-check --list-tasks tests/binary.yml
