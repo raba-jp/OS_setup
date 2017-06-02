@@ -3,10 +3,4 @@
   hosts: localhost
   connection: local
   roles:
-    - { role: apt,  tags: [ apt ] }
-    - { role: env,  tags: [ env ] }
-    - { role: mac,  tags: [ mac ] }
-    - { role: mas,  tags: [ mas ] }
-    - { role: pip,  tags: [ pip ] }
-    - { role: pip3, tags: [ pip3 ] }
-    - { role: gem,  tags: [ gem ] }
+    - { role: binary, tags: [ binary ] }
