@@ -1,0 +1,5 @@
+---
+- name: Golang
+  tasks:
+    - include: golang.yml
+      static: yes
