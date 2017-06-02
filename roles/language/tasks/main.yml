@@ -1,5 +1,20 @@
 ---
-- name: Golang
+- name: Golang setup
   tasks:
     - include: golang.yml
+      static: yes
+
+- name: Python2 setup
+  tasks:
+    - include: python2.yml
+      static: yes
+
+- name: Python3 setup
+  tasks:
+    - include: python3.yml
+      static: yes
+
+- name: Ruby setup
+  tasks:
+    - include: ruby.yml
       static: yes

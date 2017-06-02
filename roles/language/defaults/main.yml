@@ -1,0 +1,15 @@
+---
+pip_packages:
+  - neovim
+
+pip3_packages:
+  - jupyterlab
+  - widgetsnbextension
+  - neovim
+  - pygments
+
+gem_packages:
+  - travis
+  - neovim
+  - reek
+  - rubocop
