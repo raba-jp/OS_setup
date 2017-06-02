@@ -1,2 +1,2 @@
 host_vars/localhost
-localhost.retry
+*.retry
