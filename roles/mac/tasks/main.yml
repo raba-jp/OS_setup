@@ -1,8 +1,4 @@
 ---
-- name: Aggreement xcode license
-  command: xcodebuild -license accept
-  become: yes
-
 - name: Setup OS X defaults
   osx_defaults:
     domain: "{{ item.domain }}"
