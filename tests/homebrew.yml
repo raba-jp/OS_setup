@@ -1,0 +1,6 @@
+---
+- name: Test homebrew role
+  hosts: all
+  tasks:
+    - include: '../roles/homebrew/tasks/main.yml'
+      static: yes
