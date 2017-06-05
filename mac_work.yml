@@ -1,5 +1,5 @@
 ---
-- name: Setup my MacOSX (Deprecated)
+- name: Setup my MacOSX (WIP)
   hosts: localhost
   connection: local
   roles:

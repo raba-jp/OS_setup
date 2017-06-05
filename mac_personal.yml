@@ -1,0 +1,6 @@
+---
+- name: Setup personal Mac (WIP)
+  hosts: localhost
+  connection: local
+  roles:
+    - { role: env, tags: [ env ] }
