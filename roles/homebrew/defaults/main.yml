@@ -10,6 +10,7 @@ homebrew_packages:
   - curl
   - delve
   - emojify
+  - fish
   - git
   - ghq
   - glide
@@ -21,12 +22,13 @@ homebrew_packages:
   - node
   - less
   - mas
+  - nodenv
   - neovim
   - peco
   - python
   - python3
+  - rbenv
   - reattach-to-user-namespace
-  - ruby
   - sshrc
   - terminal-notifier
   - the_silver_searcher

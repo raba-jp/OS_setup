@@ -10,7 +10,6 @@ homebrew_cask_packages:
   - clipy
   - dash
   - docker
-  - dropbox
   - font-myrica
   - google-chrome
   - google-drive
