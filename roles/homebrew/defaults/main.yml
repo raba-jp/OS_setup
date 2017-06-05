@@ -5,6 +5,7 @@ homebrew_taps:
   - caskroom/fonts
   - neovim/neovim
   - go-delve/delve
+
 homebrew_packages:
   - ctags
   - curl
@@ -37,3 +38,26 @@ homebrew_packages:
   - tree
   - wget
   - { name: zsh, install_options: disable_etcdir }
+
+homebrew_cask_packages:
+  - alfred
+  - android-studio
+  - appcleaner
+  - bartender
+  - bettertouchtool
+  - betterzipql
+  - cheatsheet
+  - clipy
+  - dash
+  - docker
+  - font-myrica
+  - google-chrome
+  - google-drive
+  - mplayerx
+  - music-manager
+  - quicklook-csv
+  - qlmarkdown
+  - slack
+  - the-unarchiver
+  - vagrant
+  - virtualbox
