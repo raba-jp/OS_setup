@@ -1,10 +1,10 @@
 ---
-- name: Create Directories
+- name: Create directory
   shell: "mkdir -p {{ item }}"
   with_items:
     - "{{ directories }}"
 
-- name: Clone git repositories
+- name: Clone git repository
   git:
     repo: "{{ item.repo }}"
     dest: "{{ item.dest }}"
@@ -20,11 +20,3 @@
     state: link
   with_items:
     - "{{ symlinks }}"
-
-- name: Change login shell to /usr/local/bin/zsh
-  become: yes
-  become_method: sudo
-  user:
-    name: "{{ ansible_user_id }}"
-    shell: /usr/local/bin/zsh
-    state: present
