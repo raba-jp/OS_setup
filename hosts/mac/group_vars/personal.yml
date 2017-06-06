@@ -1,0 +1,55 @@
+---
+homebrew_packages:
+  - ctags
+  - curl
+  - delve
+  - emojify
+  - fish
+  - git
+  - ghq
+  - glide
+  - { name: gnu-sed, install_options: with-default-names }
+  - go
+  - heroku
+  - jq
+  - nkf
+  - node
+  - less
+  - mas
+  - neovim
+  - peco
+  - python
+  - python3
+  - reattach-to-user-namespace
+  - ruby
+  - sshrc
+  - terminal-notifier
+  - the_silver_searcher
+  - tig
+  - tmux
+  - tree
+  - wget
+  - { name: zsh, install_options: disable_etcdir }
+
+homebrew_cask_packages:
+  - alfred
+  - android-studio
+  - appcleaner
+  - bartender
+  - bettertouchtool
+  - betterzipql
+  - cheatsheet
+  - clipy
+  - dash
+  - docker
+  - font-myrica
+  - google-chrome
+  - google-drive
+  - mplayerx
+  - music-manager
+  - quicklook-csv
+  - qlmarkdown
+  - slack
+  - the-unarchiver
+  - vagrant
+  - virtualbox
