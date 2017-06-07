@@ -21,3 +21,10 @@
   changed_when: diff_result.rc != 0
   notify:
     - Restore iterm2 configuration
+
+- name: Change login shell to fish
+  become: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/local/bin/fish
+    state: present

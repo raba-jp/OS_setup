@@ -1,11 +1,4 @@
 ---
-homebrew_taps:
-  - homebrew/dupes
-  - caskroom/cask
-  - caskroom/fonts
-  - neovim/neovim
-  - go-delve/delve
-
 homebrew_packages:
   - ctags
   - curl
@@ -23,13 +16,12 @@ homebrew_packages:
   - node
   - less
   - mas
-  - nodenv
   - neovim
   - peco
   - python
   - python3
-  - rbenv
   - reattach-to-user-namespace
+  - ruby
   - sshrc
   - terminal-notifier
   - the_silver_searcher

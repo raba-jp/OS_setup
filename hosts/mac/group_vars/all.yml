@@ -1,0 +1,27 @@
+---
+directories
+  - ~/Development/src
+  - ~/Development/bin
+  - ~/.local/share
+  - ~/.cache
+
+xdg_data_home: "{{ ansible_user_dir }}/.local/share"
+
+git_repositories:
+  - repo: https://github.com/raba-jp/dotfiles.git
+    dest: "{{ xdg_data_home }}/dotfiles"
+  - repo: https://github.com/tmux-plugin/tpm.git
+    dest: "{{ xdg_data_home }}/tpm"
+
+symlinks:
+  - src: "{{ xdg_data_home }}/dotfiles/config"
+    dest: "{{ ansible_user_dir }}/.config"
+  - src: "{{ xdg_data_home }}/dotfiles/config/zsh/.zshenv"
+    dest: "{{ ansible_user_dir }}/.zshenv"
+
+homebrew_taps:
+  - homebrew/dupes
+  - caskroom/cask
+  - caskroom/fonts
+  - neovim/neovim
+  - go-delve/delve
