@@ -145,12 +145,12 @@ osx_defaults:
   - domain: NSGlobalDomain
     key: KeyRepeat
     type: int
-    value: 13
+    value: 2
 
   - domain: NSGlobalDomain
     key: InitialKeyRepeat
     type: int
-    value: 3
+    value: 15
 
   # 環境光が暗い場合にキーボードの輝度を調整 オン
   - domain: com.apple.BezelServices
