@@ -25,7 +25,7 @@
     install_options: "{{ item.install_options | default('') }}"
   with_items: "{{ homebrew_packages }}"
 
-- name Install homebrew cask packages
+- name: Install homebrew cask packages
   homebrew_cask:
     name: "{{ item }}"
     state: present
