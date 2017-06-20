@@ -1,6 +1,7 @@
 ---
 homebrew_taps:
   - homebrew/dupes
+  - homebrew/services
   - caskroom/cask
   - caskroom/fonts
   - neovim/neovim
@@ -15,7 +16,12 @@ homebrew_packages:
   - git
   - ghq
   - glide
-  - { name: gnu-sed, install_options: with-default-names }
+  - name: global
+    install_options:
+      - with-exuberant-ctags
+      - with-pygments
+  - name: gnu-sed
+    install_options: with-default-names
   - go
   - heroku
   - jq
@@ -37,7 +43,6 @@ homebrew_packages:
   - tmux
   - tree
   - wget
-  - { name: zsh, install_options: disable_etcdir }
 
 homebrew_cask_packages:
   - alfred
