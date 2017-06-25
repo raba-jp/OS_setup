@@ -8,6 +8,7 @@ homebrew_taps:
   - go-delve/delve
 
 homebrew_packages:
+  - boost
   - ctags
   - curl
   - delve
@@ -51,6 +52,7 @@ homebrew_cask_packages:
   - bartender
   - bettertouchtool
   - betterzipql
+  - boostnote
   - cheatsheet
   - clipy
   - dash
