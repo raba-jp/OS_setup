@@ -1,0 +1,6 @@
+---
+- name: Test go role
+  hosts: all
+  tasks:
+    - include: '../roles/go/tasks/main.yml'
+      static: yes
