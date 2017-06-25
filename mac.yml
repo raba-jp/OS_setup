@@ -1,9 +1,13 @@
 ---
-- name: Setup my MacOSX (Deprecated)
-  hosts: localhost
+- name: Setup my MacOSX
+  hosts: all
   connection: local
+  vars_files:
+    - vars/{{ stage }}.yml
   roles:
-    - { role: homebrew,      tags: [ homebrew ] }
     - { role: env,           tags: [ env ] }
-    - { role: mac,           tags: [ mac ] }
-    - { role: mas,           tags: [ mas ] }
+    - { role: homebrew,      tags: [ homebrew ] }
+    - { role: go,            tags: [ go ] }
+    - { role: ruby,          tags: [ ruby ] }
+    - { role: python2,       tags: [ python2 ] }
+    - { role: python3,       tags: [ python3 ] }

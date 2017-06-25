@@ -1,0 +1,20 @@
+---
+directories: []
+
+git_repositories: []
+
+symlinks: []
+
+homebrew_taps: []
+
+homebrew_packages:
+  - nodenv
+  - rbenv
+
+homebrew_cask_packages: []
+
+ruby_packages: []
+
+python2_packages: []
+
+python3_packages: []

@@ -1,14 +1,14 @@
 ---
 - name: Create directory
   shell: "mkdir -p {{ item }}"
-  with_items: "{{ directories }}"
+  with_items: "{{ default_directories + directories }}"
 
 - name: Clone git repository
   git:
     repo: "{{ item.repo }}"
     dest: "{{ item.dest }}"
     accept_hostkey: yes
-  with_items: "{{ git_repositories }}"
+  with_items: "{{ default_git_repositories + git_repositories }}"
 
 - name: Create symlinks
   file:
@@ -16,4 +16,4 @@
     dest: "{{ item.dest }}"
     force: yes
     state: link
-  with_items: "{{ symlinks }}"
+  with_items: "{{ default_symlinks + symlinks }}"
