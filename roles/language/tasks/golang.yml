@@ -1,9 +1,0 @@
----
-- name: Copy file
-  become: yes
-  template:
-    src: "etc/profile.d/golang.sh"
-    dest: "/etc/profile.d/golang.sh"
-    owner: root
-    group: root
-    mode: 0644

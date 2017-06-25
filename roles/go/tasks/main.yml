@@ -1,0 +1,11 @@
+---
+- name: Check gocode binary
+  stat:
+    path: "{{ gopath }}/bin/gocode"
+  register: gocode
+
+- name: Install gocode
+  command: go get -u github.com/nsf/gocode
+  environment:
+    GOPATH: "{{ gopath }}"
+  when: gocode.stat.exists
