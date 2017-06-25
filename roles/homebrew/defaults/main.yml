@@ -1,5 +1,5 @@
 ---
-homebrew_taps:
+default_homebrew_taps:
   - homebrew/dupes
   - homebrew/services
   - caskroom/cask
@@ -7,61 +7,39 @@ homebrew_taps:
   - neovim/neovim
   - go-delve/delve
 
-homebrew_packages:
+default_homebrew_packages:
   - boost
   - ctags
-  - curl
-  - delve
-  - emojify
   - fish
   - git
   - ghq
-  - glide
-  - name: global
-    install_options:
-      - with-exuberant-ctags
-      - with-pygments
   - name: gnu-sed
     install_options: with-default-names
   - go
-  - heroku
   - jq
   - nkf
-  - node
   - less
-  - mas
-  - nodenv
   - neovim
   - peco
   - python
   - python3
-  - rbenv
   - reattach-to-user-namespace
-  - sshrc
   - terminal-notifier
+  - sshrc
   - the_silver_searcher
   - tig
   - tmux
   - tree
   - wget
 
-homebrew_cask_packages:
-  - alfred
-  - android-studio
+default_homebrew_cask_packages:
   - appcleaner
-  - bartender
   - bettertouchtool
   - betterzipql
-  - boostnote
   - cheatsheet
-  - clipy
-  - dash
   - docker
   - font-myrica
   - google-chrome
-  - google-drive
-  - mplayerx
-  - music-manager
   - quicklook-csv
   - qlmarkdown
   - slack

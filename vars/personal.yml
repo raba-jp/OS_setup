@@ -1,0 +1,31 @@
+---
+directories: []
+
+git_repositories: []
+
+symlinks: []
+
+homebrew_taps: []
+
+homebrew_packages:
+  - heroku
+  - mas
+  - node
+  - ruby
+
+homebrew_cask_packages:
+  - alfred
+  - android-studio
+  - bartender
+  - boostnote
+  - clipy
+  - dash
+  - google-drive
+  - mplayerx
+  - music-manager
+
+ruby_packages: []
+
+python2_packages: []
+
+python3_packages: []
