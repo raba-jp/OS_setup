@@ -10,6 +10,7 @@ default_homebrew_taps:
 default_homebrew_packages:
   - boost
   - ctags
+  - exa
   - fish
   - git
   - ghq
