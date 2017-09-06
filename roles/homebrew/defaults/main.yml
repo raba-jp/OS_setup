@@ -10,6 +10,7 @@ default_homebrew_taps:
 default_homebrew_packages:
   - boost
   - ctags
+  - exa
   - fish
   - git
   - ghq
@@ -17,6 +18,8 @@ default_homebrew_packages:
     install_options: with-default-names
   - go
   - jq
+  - kube-prompt
+  - kubernetes-helm
   - nkf
   - less
   - neovim
