@@ -1,5 +1,9 @@
 #?/bin/sh
 
+type brew >/dev/null 2>&1
+if [ echo $? -eq 0 ]; then
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 while read -p "playbook file? " playbook ; do
 	while read -p "password? " password ; do
 		# pip setup
