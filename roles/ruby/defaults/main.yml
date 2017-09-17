@@ -1,5 +1,5 @@
 ---
-ruby_packages:
+default_ruby_packages:
   - travis
   - neovim
   - reek
