@@ -17,3 +17,6 @@
     force: yes
     state: link
   with_items: "{{ default_symlinks + symlinks }}"
+
+- include: variables.yml
+  with_items: "{{ default_variables + variables }}"

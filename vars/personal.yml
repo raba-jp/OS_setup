@@ -1,9 +1,8 @@
 ---
 directories: []
-
 git_repositories: []
-
 symlinks: []
+variables: []
 
 homebrew_taps: []
 
@@ -25,7 +24,5 @@ homebrew_cask_packages:
   - music-manager
 
 ruby_packages: []
-
 python2_packages: []
-
 python3_packages: []
