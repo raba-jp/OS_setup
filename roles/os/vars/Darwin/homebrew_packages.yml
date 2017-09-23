@@ -1,0 +1,28 @@
+---
+default_homebrew_packages:
+  - boost
+  - ctags
+  - exa
+  - fish
+  - git
+  - ghq
+  - name: gnu-sed
+    install_options: with-default-names
+  - go
+  - jq
+  - kube-prompt
+  - kubernetes-helm
+  - nkf
+  - less
+  - neovim
+  - peco
+  - python
+  - python3
+  - reattach-to-user-namespace
+  - terminal-notifier
+  - sshrc
+  - the_silver_searcher
+  - tig
+  - tmux
+  - tree
+  - wget

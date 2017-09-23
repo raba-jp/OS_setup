@@ -1,9 +1,0 @@
----
-- name: Exist environment variable
-  shell: fish --command 'set --query {{ item.name }}; echo $status'
-  register: exist_variable
-  changed_when: False
-
-- name: Set environment variable
-  shell: fish --command 'set --universal {{ item.name }} {{ item.value }}'
-  when: exist_variable == 0

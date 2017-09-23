@@ -1,6 +1,0 @@
----
-- name: Install Python2 package
-  pip:
-    name: "{{ item.name | default(item) }}"
-    state: "{{ item.state | default('latest') }}"
-  with_items: "{{ default_python2_packages + python2_packages }}"

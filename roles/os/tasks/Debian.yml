@@ -1,0 +1,14 @@
+---
+- include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Update packages
+  apt:
+    update_cache: yes
+
+- name: Install package
+  apt:
+    name: "{{ item }}"
+    state: present
+    autoclean: yes
+    autoremove: yes
+  with_items: "{{ default_apt_packages + apt_packages }}"

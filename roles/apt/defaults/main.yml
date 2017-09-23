@@ -1,6 +1,0 @@
----
-apt-packages
-  - fish
-  - git
-  - python-pip
-  - python3-pip

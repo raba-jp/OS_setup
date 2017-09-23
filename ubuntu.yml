@@ -1,6 +1,0 @@
----
-- name: Setup my MacOSX
-  hosts: localhost
-  connection: local
-  roles:
-    - { role: binary, tags: [ binary ] }

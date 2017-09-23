@@ -1,0 +1,15 @@
+---
+default_homebrew_cask_packages:
+  - appcleaner
+  - bettertouchtool
+  - betterzipql
+  - cheatsheet
+  - docker
+  - font-myrica
+  - google-chrome
+  - quicklook-csv
+  - qlmarkdown
+  - slack
+  - the-unarchiver
+  - vagrant
+  - virtualbox

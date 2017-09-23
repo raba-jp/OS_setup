@@ -1,0 +1,8 @@
+---
+default_homebrew_taps:
+  - homebrew/dupes
+  - homebrew/services
+  - caskroom/cask
+  - caskroom/fonts
+  - neovim/neovim
+  - go-delve/delve

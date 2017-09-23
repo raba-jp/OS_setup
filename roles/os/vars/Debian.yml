@@ -1,0 +1,6 @@
+---
+default_apt_packages:
+  - fish
+  - git
+  - python-pip
+  - python3-pip

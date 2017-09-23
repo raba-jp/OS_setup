@@ -1,4 +1,5 @@
 ---
+app_store_upgrade: False
 directories: []
 git_repositories: []
 symlinks: []

@@ -1,0 +1,8 @@
+---
+- name: Already exist directory
+  shell: "fish --command 'test -e {{ item }}; and echo exist'"
+  register: is_exist
+
+- name: Create directory
+  shell: "mkdir -p {{ item }}"
+  when: is_exist == "exist"
