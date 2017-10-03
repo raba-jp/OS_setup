@@ -2,7 +2,8 @@
 script_dir=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 cd $script_dir/../
 
-read -p "SUDO Password : " password
+echo 'SUDO Password : '
+read -s password
 read -p "personal or work? : " stage
 
 which brew >/dev/null 2>&1
