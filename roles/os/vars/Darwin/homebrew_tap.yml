@@ -6,3 +6,4 @@ default_homebrew_taps:
   - caskroom/fonts
   - neovim/neovim
   - go-delve/delve
+  - c-bata/kube-prompt
