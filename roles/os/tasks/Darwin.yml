@@ -7,7 +7,7 @@
 - include: "{{ ansible_os_family }}/homebrew.yml"
 
 - include: "{{ ansible_os_family }}/mas-cli.yml"
-  when: stage != work
+  when: stage != 'work'
 
 - name: Setup OS X defaults
   osx_defaults:
