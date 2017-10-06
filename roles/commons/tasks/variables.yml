@@ -5,5 +5,5 @@
   changed_when: False
 
 - name: Set environment variable
-  shell: fish --command 'set --universal {{ item.name }} {{ item.value }}'
+  shell: fish --command 'set --universal --export {{ item.name }} {{ item.value }}'
   when: is_exist_variable.rc == 0
