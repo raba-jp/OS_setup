@@ -1,0 +1,21 @@
+#!/usr/bin/expect
+
+set stage [lindex $argv 0]
+set password [lindex $argv 1]
+
+set timeout 3000
+
+spawn bash
+spawn ansible-playbook -i inventories/${stage} --ask-become-pass main.yml
+
+expect {
+	-glob "SUDO password:" {
+		send -- "${password}\n"
+	}
+}
+
+expect {
+	-glob "$" {
+		exit 0
+	}
+}
