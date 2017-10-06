@@ -6,4 +6,4 @@
 
 - name: Set environment variable
   shell: fish --command 'set --universal --export {{ item.name }} {{ item.value }}'
-  when: is_exist_variable.rc == 0
+  when: is_exist_variable.rc != 0
