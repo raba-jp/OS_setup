@@ -46,5 +46,9 @@ default_variables:
     value: $HOME/Library/Android/sdk/platform-tools
   - name: SYS_NOTIFIER
     value: /usr/local/bin/terminal-notifier
+  - name: CARGO_HOME
+    value: $XDG_DATA_HOME/cargo
+  - name: RUSTUP_HOME
+    value: $XDG_DATA_HOME/rustup
   - name: PATH
-    value: "$GOPATH/bin $ANDROID_SDK_TOOLS/bin $ANDROID_SDK_PLATFORM_TOOLS $PATH"
+    value: "$GOPATH/bin $ANDROID_SDK_TOOLS/bin $ANDROID_SDK_PLATFORM_TOOLS $CARGO_HOME/bin $PATH"

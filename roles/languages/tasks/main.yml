@@ -4,3 +4,5 @@
 - include: ruby.yml
 
 - include: go.yml
+
+- include: rust.yml

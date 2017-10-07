@@ -1,0 +1,10 @@
+---
+- name: Already exist rust
+  shell: type rustc
+  register: is_exist_rust
+  changed_when: False
+  ignore_errors: True
+
+- name: Install rust by rustup
+  shell: CARGO_HOME=$XDG_DATA_HOME/cargo RUSTUP_HOME=$XDG_DATA_HOME/rustup bash -c 'curl https://sh.rustup.rs -sSf | sh -s -- -y'
+  when: is_exist_rust.rc != 0
