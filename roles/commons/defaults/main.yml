@@ -18,6 +18,8 @@ default_symlinks:
     dest: "{{ ansible_user_dir }}/.config"
   - src:  "{{ xdg_data_home }}/dotfiles/config/nvim/init.nvim"
     dest: "{{ ansible_user_dir }}/.vimrc"
+  - src:  "{{ xdg_data_home }}/dotfiles/.ideavimrc"
+    dest: "{{ ansible_user_dir }}/.ideavimrc"
 
 default_variables:
   - name: XDG_CONFIG_HOME
