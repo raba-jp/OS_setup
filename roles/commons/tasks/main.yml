@@ -19,3 +19,14 @@
 
 - include: variables.yml
   with_items: "{{ default_variables + variables }}"
+
+- name: Erase fish_user_path
+  shell: fish --command 'set --erase fish_user_paths'
+  check_mode: no
+  changed_when: False
+  ignore_errors: True
+
+- name: Apply PATH
+  shell: fish --command 'set --universal fish_user_paths {{ item }} $fish_user_paths'
+  changed_when: False
+  with_items: "{{ paths }}"

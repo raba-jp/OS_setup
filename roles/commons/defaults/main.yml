@@ -50,5 +50,9 @@ default_variables:
     value: $XDG_DATA_HOME/cargo
   - name: RUSTUP_HOME
     value: $XDG_DATA_HOME/rustup
-  - name: PATH
-    value: "$GOPATH/bin $ANDROID_SDK_TOOLS/bin $ANDROID_SDK_PLATFORM_TOOLS $CARGO_HOME/bin $PATH"
+
+paths:
+  - $GOPATH/bin
+  - $ANDROID_SDK_TOOLS/bin
+  - $ANDROID_SDK_PLATFORM_TOOLS
+  - $CARGO_HOME/bin
