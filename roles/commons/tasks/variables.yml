@@ -3,6 +3,7 @@
   shell: fish --command 'set --query {{ item.name }}'
   register: is_exist_variable
   changed_when: False
+  ignore_errors: True
 
 - name: Set environment variable
   shell: fish --command 'set --universal --export {{ item.name }} {{ item.value }}'
