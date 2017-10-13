@@ -3,6 +3,7 @@ default_homebrew_packages:
   - boost
   - ctags
   - exa
+  - fd
   - fish
   - git
   - ghq
