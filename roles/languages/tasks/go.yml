@@ -3,13 +3,13 @@
   include_vars:
     file: go.yml
 
-- name: Check gocode binary
+- name: Check gb binary
   stat:
-    path: "{{ gopath }}/bin/gocode"
-  register: gocode
+    path: "{{ gopath }}/bin/gb"
+  register: gb
 
-- name: Install gocode
-  command: go get -u github.com/nsf/gocode
+- name: Install gb
+  command: go get -u github.com/constabulary/gb/...
   environment:
     GOPATH: "{{ gopath }}"
-  when: gocode.stat.exists
+  when: gb.stat.exists
