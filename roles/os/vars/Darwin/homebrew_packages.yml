@@ -1,10 +1,17 @@
 ---
 default_homebrew_packages:
+  - bash-completion
   - boost
+  - brew-cask-completion
+  - bundler-completion
+  - cargo-completion
   - ctags
+  - docker-completion
+  - docker-compose-completion
   - exa
   - fd
   - fish
+  - gem-completion
   - git
   - ghq
   - name: gnu-sed
@@ -17,9 +24,14 @@ default_homebrew_packages:
   - less
   - neovim
   - peco
+  - pip-completion
   - python
   - python3
+  - rails-completion
+  - rake-completion
+  - ruby-completion
   - reattach-to-user-namespace
+  - rustc-completion
   - terminal-notifier
   - sshrc
   - the_silver_searcher
