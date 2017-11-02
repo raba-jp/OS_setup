@@ -32,8 +32,6 @@ default_variables:
     value: $HOME/.cache
   - name: XDG_DATA_HOME
     value: $HOME/.local/share
-  - name: ATOM_HOME
-    value: $XDG_DATA_HOME/atom
   - name: LESSHISTFILE
     value: $XDG_CACHE_HOME/less/history
   - name: MPLAYER_HOME
