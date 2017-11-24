@@ -33,6 +33,7 @@ default_homebrew_packages:
   - reattach-to-user-namespace
   - rustc-completion
   - terminal-notifier
+  - sourcekitten
   - sshrc
   - the_silver_searcher
   - tig
