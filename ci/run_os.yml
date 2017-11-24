@@ -4,5 +4,6 @@
   connection: local
   vars_files:
     - ../vars/{{ stage }}.yml
+    - ../roles/os/vars/Debian.yml
   tasks:
     - include_tasks: '../roles/os/tasks/main.yml'
