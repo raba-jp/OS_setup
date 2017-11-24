@@ -11,4 +11,4 @@ run:
     - -c
     - |
       cd repository
-      ansible-playbook -i inventories/personal ci/run_os.yml
+      ansible-playbook -i inventories/personal ci/playbooks/ubuntu.yml
