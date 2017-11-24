@@ -4,5 +4,5 @@
   connection: local
   vars_files:
     - ../vars/{{ stage }}.yml
-  roles:
-    - { role: os,      tags: [ os ] }
+  tasks:
+    - include_tasks: '../roles/os/tasks/main.yml'
