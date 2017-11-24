@@ -1,0 +1,9 @@
+---
+- name: Run mac role
+  hosts: all
+  connection: local
+  vars_files:
+    - ../vars/{{ stage }}.yml
+    - ../roles/mac/vars/main.yml
+  tasks:
+    - include_tasks: '../roles/mac/tasks/main.yml'
