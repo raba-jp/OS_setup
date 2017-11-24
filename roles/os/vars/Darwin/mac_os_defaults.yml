@@ -69,8 +69,8 @@ mac_os_defaults:
   # トラックパッドをタップ = 常時クリック
   - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
     key: Clicking
-    type: bool
-    value: true
+    type: int
+    value: 1
 
   - domain: NSGlobalDomain 
     host: currentHost
@@ -85,8 +85,8 @@ mac_os_defaults:
 
   - domain: com.apple.AppleMultitouchTrackpad
     key: Clicking
-    type: bool
-    value: true
+    type: int
+    value: 1
 
   - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
     key: TrackpadCornerSecondaryClick
