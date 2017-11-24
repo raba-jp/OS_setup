@@ -1,0 +1,8 @@
+---
+- name: Run os role
+  hosts: all
+  connection: local
+  vars_files:
+    - ../vars/{{ stage }}.yml
+  roles:
+    - { role: os,      tags: [ os ] }
