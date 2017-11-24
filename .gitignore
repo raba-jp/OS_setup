@@ -1,2 +1,3 @@
 host_vars/localhost
 *.retry
+ci/credentials.yml
