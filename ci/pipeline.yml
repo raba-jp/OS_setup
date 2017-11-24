@@ -6,7 +6,7 @@ resources:
       uri: https://github.com/raba-jp/OS_Setup
 
 jobs:
-  - name: os role
+  - name: ubuntu role
     plan:
       - get: repository
         trigger: true

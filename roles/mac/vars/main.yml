@@ -1,4 +1,70 @@
 ---
+default_homebrew_taps:
+  - homebrew/dupes
+  - homebrew/services
+  - caskroom/cask
+  - caskroom/fonts
+  - neovim/neovim
+  - go-delve/delve
+  - c-bata/kube-prompt
+
+default_homebrew_packages:
+  - bash-completion
+  - boost
+  - brew-cask-completion
+  - bundler-completion
+  - cargo-completion
+  - ctags
+  - docker-completion
+  - docker-compose-completion
+  - exa
+  - fd
+  - fish
+  - gem-completion
+  - git
+  - ghq
+  - name: gnu-sed
+    install_options: with-default-names
+  - go
+  - jq
+  - kube-prompt
+  - kubernetes-helm
+  - nkf
+  - less
+  - neovim
+  - peco
+  - pip-completion
+  - python
+  - python3
+  - rails-completion
+  - rake-completion
+  - ruby-completion
+  - reattach-to-user-namespace
+  - rustc-completion
+  - terminal-notifier
+  - sourcekitten
+  - sshrc
+  - the_silver_searcher
+  - tig
+  - tmux
+  - tree
+  - wget
+
+default_homebrew_cask_packages:
+  - appcleaner
+  - bettertouchtool
+  - betterzipql
+  - cheatsheet
+  - docker
+  - font-myrica
+  - google-chrome
+  - google-cloud-sdk
+  - inkdrop
+  - quicklook-csv
+  - qlmarkdown
+  - slack
+  - the-unarchiver
+
 mac_os_defaults:
   # 半透明メニューバー
   - domain: NSGlobalDomain

@@ -1,6 +1,0 @@
----
-- include: "{{ ansible_os_family }}.yml"
-  when: ansible_os_family == 'Darwin'
-
-- include: "{{ ansible_os_family }}.yml"
-  when: ansible_os_family == 'Debian'
