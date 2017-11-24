@@ -4,9 +4,6 @@
     dir: "vars/{{ ansible_os_family }}"
     extensions: ['yml']
 
-- include: "{{ ansible_os_family }}/mas-cli.yml"
-  when: stage != 'work'
-
 - include: "{{ ansible_os_family }}/homebrew.yml"
 
 - name: Setup OS X defaults

@@ -7,14 +7,13 @@
     repo: "{{ item.repo }}"
     dest: "{{ item.dest }}"
     accept_hostkey: yes
+    update: "{{ item.update | default(True) }}"
   with_items: "{{ default_git_repositories + git_repositories }}"
 
-- name: Create symlinks
-  file:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
-    force: yes
-    state: link
+- name: Create Symlink
+  shell: |
+    rm -rf {{ item.dest }}; \
+    ln -s {{ item.src }} {{ item.dest }}
   with_items: "{{ default_symlinks + symlinks }}"
 
 - include: variables.yml

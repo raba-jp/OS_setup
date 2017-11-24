@@ -10,6 +10,7 @@ xdg_data_home: "{{ ansible_user_dir }}/.local/share"
 default_git_repositories:
   - repo: https://github.com/raba-jp/dotfiles.git
     dest: "{{ xdg_data_home }}/dotfiles"
+    update: False
   - repo: https://github.com/tmux-plugins/tpm
     dest: "{{ xdg_data_home }}/tpm"
 
