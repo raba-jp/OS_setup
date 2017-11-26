@@ -1,0 +1,14 @@
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: rabajp/os_setup
+inputs:
+  - name: repository
+run:
+  path: /bin/bash
+  args:
+    - -c
+    - |
+      cd repository
+      ansible-playbook -i inventories/personal ci/playbooks/go.yml

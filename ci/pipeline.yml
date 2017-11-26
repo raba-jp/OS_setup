@@ -18,3 +18,9 @@ jobs:
         trigger: true
       - task: run
         file: repository/ci/tasks/role_mac.yml
+  - name: go role
+    plan:
+      - get: repository
+        trigger: true
+      - task: run
+        file: repository/ci/tasks/role_go.yml

@@ -1,0 +1,9 @@
+---
+- name: Run go role
+  hosts: all
+  connection: local
+  vars_files:
+    - ../../vars/{{ stage }}.yml
+    - ../../roles/go/vars/main.yml
+  tasks:
+    - include_tasks: '../../roles/go/tasks/main.yml'

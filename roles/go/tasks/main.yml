@@ -1,0 +1,22 @@
+---
+- name: Check gb binary
+  stat:
+    path: "{{ gopath }}/bin/gb"
+  register: gb
+
+- name: Install gb
+  shell: go get -u github.com/constabulary/gb/...
+  environment:
+    GOPATH: "{{ gopath }}"
+  when: not gb.stat.exists
+
+- name: Check gocode binary
+  stat:
+    path: "{{ gopath }}/bin/gocode"
+  register: gocode
+
+- name: Install gb
+  shell: go get -u github.com/nsf/gocode
+  environment:
+    GOPATH: "{{ gopath }}"
+  when: not gocode.stat.exists

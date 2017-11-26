@@ -1,0 +1,2 @@
+---
+gopath: "{{ ansible_user_dir }}/Development"
