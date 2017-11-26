@@ -8,10 +8,29 @@
     - role: mac
       tags:
         - mac
+        - os
       when: ansible_os_family == 'Darwin'
     - role: ubuntu
       tags:
         - ubuntu
+        - os
       when: ansible_os_family == 'Debian'
-    - { role: languages,    tags: [ languages ] }
-    - { role: commons,      tags: [ commons ] }
+    - role: commons
+      tags:
+        - commons
+    - role: ruby
+      tags:
+        - ruby
+        - language
+    - role: go
+      tags:
+        - go
+        - language
+    - role: python
+      tags:
+        - python
+        - language
+    - role: rust
+      tags:
+        - rust
+        - language
