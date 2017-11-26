@@ -11,28 +11,38 @@ jobs:
       - get: repository
         trigger: true
       - task: run
-        file: repository/ci/tasks/role_ubuntu.yml
+        file: repository/ci/tasks/role.yml
+        params:
+          ROLE_NAME: ubuntu
   - name: mac role
     plan:
       - get: repository
         trigger: true
       - task: run
-        file: repository/ci/tasks/role_mac.yml
+        file: repository/ci/tasks/role.yml
+        params:
+          ROLE_NAME: mac
   - name: go role
     plan:
       - get: repository
         trigger: true
       - task: run
-        file: repository/ci/tasks/role_go.yml
+        file: repository/ci/tasks/role.yml
+        params:
+          ROLE_NAME: go
   - name: python role
     plan:
       - get: repository
         trigger: true
       - task: run
-        file: repository/ci/tasks/role_python.yml
+        file: repository/ci/tasks/role.yml
+        params:
+          ROLE_NAME: python
   - name: ruby role
     plan:
       - get: repository
         trigger: true
       - task: run
-        file: repository/ci/tasks/role_ruby.yml
+        file: repository/ci/tasks/role.yml
+        params:
+          ROLE_NAME: ruby
