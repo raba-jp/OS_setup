@@ -11,12 +11,12 @@ jobs:
       - get: repository
         trigger: true
       - aggregate:
-        - task: run
+        - task: Ubuntu 16.04
           file: repository/ci/tasks/role.yml
           params:
             ROLE_NAME: ubuntu
-        - task: run
-          file: repository/ci/tasks/role.yml
+        - task: macOS
+          file: repository/ci/tasks/role_mac.yml
           params:
             ROLE_NAME: mac
   - name: Language roles
