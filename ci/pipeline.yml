@@ -54,3 +54,11 @@ jobs:
         file: repository/ci/tasks/role.yml
         params:
           ROLE_NAME: rust
+  - name: commons role
+    plan:
+      - get: repository
+        trigger: true
+      - task: run
+        file: repository/ci/tasks/role.yml
+        params:
+          ROLE_NAME: commons
