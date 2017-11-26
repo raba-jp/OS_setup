@@ -401,19 +401,6 @@ mac_os_defaults:
     type: bool
     value: false
 
-  # Dock を自動的に隠す
-  - domain: com.apple.dock
-    key: autohide
-    type: bool
-    value: true
-    notify: "Restart Dock"
-
-  - domain: com.apple.dock
-    key: autohide-delay
-    type: float
-    value: 0
-    notify: "Restart Dock"
-
   # 隠れているアプリケーションの dock のアイコン透過
   - domain: com.apple.dock
     key: showhidden
