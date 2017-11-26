@@ -2,17 +2,17 @@
 - name: Install rbenv
   git:
     repo: https://github.com/sstephenson/rbenv.git
-    dest: {{ xdg_data_home }}/rbenv
+    dest: "{{ xdg_data_home }}/rbenv"
     accept_hostkey: yes
 
 - name: Install ruby-build
   git:
     repo: https://github.com/sstephenson/ruby-build.git
-    dest: {{ xdg_data_home }}/rbenv/ruby-build
+    dest: "{{ xdg_data_home }}/rbenv/ruby-build"
     accept_hostkey: yes
 
 - name: Install Ruby package
   gem:
-    name: {{ item.name | default(item) }}
-    state: {{ item.state | default('latest') }}
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('latest') }}"
   with_items: "{{ default_ruby_packages + ruby_packages }}"
