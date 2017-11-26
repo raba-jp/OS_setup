@@ -4,7 +4,6 @@
     repo: "{{ item.repo }}"
     dest: "{{ item.dest }}"
     accept_hostkey: yes
-    update: "{{ item.update | default(True) }}"
   with_items: "{{ default_git_repositories + git_repositories }}"
 
 - name: Create Symlink
