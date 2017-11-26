@@ -46,3 +46,11 @@ jobs:
         file: repository/ci/tasks/role.yml
         params:
           ROLE_NAME: ruby
+  - name: rust role
+    plan:
+      - get: repository
+        trigger: true
+      - task: run
+        file: repository/ci/tasks/role.yml
+        params:
+          ROLE_NAME: rust
