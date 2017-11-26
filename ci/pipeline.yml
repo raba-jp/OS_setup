@@ -48,3 +48,27 @@ jobs:
         file: repository/ci/tasks/role.yml
         params:
           ROLE_NAME: commons
+  - name: All
+    plan:
+      - get: repository
+        trigger: true
+        passed:
+          - OS roles
+          - Language roles
+          - commons role
+      - task: ubuntu personal
+        file: repository/ci/tasks/main_ubuntu.yml
+        params:
+          STAGE: personal
+      - task: ubuntu work
+        file: repository/ci/tasks/main_ubuntu.yml
+        params:
+          STAGE: work
+      - task: darwin personal
+        file: repository/ci/tasks/main_darwin.yml
+        params:
+          STAGE: personal
+      - task: darwin work
+        file: repository/ci/tasks/main_darwin.yml
+        params:
+          STAGE: work

@@ -1,0 +1,13 @@
+---
+platform: darwin
+inputs:
+  - name: repository
+run:
+  path: /bin/bash
+  dir: repository
+  args:
+    - -c
+    - |
+      ansible-playbook \
+        -i inventories/${STAGE} \
+        main.yml
