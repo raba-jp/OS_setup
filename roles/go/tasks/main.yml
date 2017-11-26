@@ -3,6 +3,7 @@
   stat:
     path: "{{ gopath }}/bin/gb"
   register: gb
+  ignore_errors: True
 
 - name: Install gb
   shell: go get -u github.com/constabulary/gb/...
@@ -14,6 +15,7 @@
   stat:
     path: "{{ gopath }}/bin/gocode"
   register: gocode
+  ignore_errors: True
 
 - name: Install gb
   shell: go get -u github.com/nsf/gocode
