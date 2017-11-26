@@ -6,54 +6,40 @@ resources:
       uri: https://github.com/raba-jp/OS_Setup
 
 jobs:
-  - name: ubuntu role
+  - name: OS roles
     plan:
       - get: repository
         trigger: true
-      - task: run
-        file: repository/ci/tasks/role.yml
-        params:
-          ROLE_NAME: ubuntu
-  - name: mac role
+      - aggregate:
+        - task: run
+          file: repository/ci/tasks/role.yml
+          params:
+            ROLE_NAME: ubuntu
+        - task: run
+          file: repository/ci/tasks/role.yml
+          params:
+            ROLE_NAME: mac
+  - name: Language roles
     plan:
       - get: repository
         trigger: true
-      - task: run
-        file: repository/ci/tasks/role.yml
-        params:
-          ROLE_NAME: mac
-  - name: go role
-    plan:
-      - get: repository
-        trigger: true
-      - task: run
-        file: repository/ci/tasks/role.yml
-        params:
-          ROLE_NAME: go
-  - name: python role
-    plan:
-      - get: repository
-        trigger: true
-      - task: run
-        file: repository/ci/tasks/role.yml
-        params:
-          ROLE_NAME: python
-  - name: ruby role
-    plan:
-      - get: repository
-        trigger: true
-      - task: run
-        file: repository/ci/tasks/role.yml
-        params:
-          ROLE_NAME: ruby
-  - name: rust role
-    plan:
-      - get: repository
-        trigger: true
-      - task: run
-        file: repository/ci/tasks/role.yml
-        params:
-          ROLE_NAME: rust
+      - aggregate:
+        - task: Go
+          file: repository/ci/tasks/role.yml
+          params:
+            ROLE_NAME: go
+        - task: Python
+          file: repository/ci/tasks/role.yml
+          params:
+            ROLE_NAME: python
+        - task: Ruby
+          file: repository/ci/tasks/role.yml
+          params:
+            ROLE_NAME: ruby
+        - task: Rust
+          file: repository/ci/tasks/role.yml
+          params:
+            ROLE_NAME: rust
   - name: commons role
     plan:
       - get: repository
