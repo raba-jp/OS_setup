@@ -7,3 +7,5 @@
     - ../../roles/{{ role_name }}/vars/main.yml
   tasks:
     - include_tasks: ../../roles/{{ role_name }}/tasks/main.yml
+  handlers:
+    - include_tasks: ../../roles/{{ role_name }}/handlers/main.yml
