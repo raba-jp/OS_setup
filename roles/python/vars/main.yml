@@ -1,0 +1,9 @@
+---
+default_python2_packages:
+  - neovim
+
+default_python3_packages:
+  - jupyterlab
+  - widgetsnbextension
+  - neovim
+  - pygments

@@ -1,0 +1,9 @@
+---
+- name: Run python role
+  hosts: all
+  connection: local
+  vars_files:
+    - ../../vars/{{ stage }}.yml
+    - ../../roles/python/vars/main.yml
+  tasks:
+    - include_tasks: '../../roles/python/tasks/main.yml'
