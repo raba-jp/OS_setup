@@ -1,5 +1,6 @@
 ---
-app_store_upgrade: False
+xdg_data_home: "{{ ansible_user_dir }}/.local/share"
+
 directories: []
 git_repositories: []
 symlinks: []

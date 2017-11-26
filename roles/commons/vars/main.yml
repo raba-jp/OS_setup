@@ -5,8 +5,6 @@ default_directories:
   - ~/.local/share
   - ~/.cache/zsh
 
-xdg_data_home: "{{ ansible_user_dir }}/.local/share"
-
 default_git_repositories:
   - repo: https://github.com/raba-jp/dotfiles.git
     dest: "{{ xdg_data_home }}/dotfiles"
