@@ -1,0 +1,9 @@
+---
+- name: Run rust role
+  hosts: all
+  connection: local
+  vars_files:
+    - ../../vars/{{ stage }}.yml
+    - ../../roles/rust/vars/main.yml
+  tasks:
+    - include_tasks: '../../roles/rust/tasks/main.yml'
