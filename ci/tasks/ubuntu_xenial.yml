@@ -17,7 +17,16 @@ run:
       FROM ubuntu:xenial
       RUN apt-get update && \
             apt-get install -y software-properties-common && \
+            apt-add-repository ppa:gophers/archive && \
             apt-add-repository ppa:ansible/ansible && \
             apt-get update && \
-            apt-get install -y ansible
+            apt-get install -y \
+              ansible \
+              golang-1.9-go \
+              python-dev \
+              python-pip \
+              python3-dev \
+              python3-pip \
+              ruby2.3 \
+              ruby2.3-dev
       EOF
