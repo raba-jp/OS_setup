@@ -1,0 +1,6 @@
+---
+default_ruby_packages:
+  - travis
+  - neovim
+  - reek
+  - rubocop

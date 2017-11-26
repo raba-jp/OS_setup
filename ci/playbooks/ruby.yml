@@ -1,0 +1,9 @@
+---
+- name: Run ruby role
+  hosts: all
+  connection: local
+  vars_files:
+    - ../../vars/{{ stage }}.yml
+    - ../../roles/ruby/vars/main.yml
+  tasks:
+    - include_tasks: '../../roles/ruby/tasks/main.yml'

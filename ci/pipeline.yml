@@ -30,3 +30,9 @@ jobs:
         trigger: true
       - task: run
         file: repository/ci/tasks/role_python.yml
+  - name: ruby role
+    plan:
+      - get: repository
+        trigger: true
+      - task: run
+        file: repository/ci/tasks/role_ruby.yml
