@@ -1,7 +1,4 @@
 ---
-- include: directories.yml
-  with_items: "{{ default_directories + directories }}"
-
 - name: Clone git repository
   git:
     repo: "{{ item.repo }}"
