@@ -21,7 +21,5 @@ run:
             apt-get update && \
             apt-get install -y \
               git \
-              ansible \
-              ruby2.3 \
-              ruby2.3-dev
+              ansible
       EOF

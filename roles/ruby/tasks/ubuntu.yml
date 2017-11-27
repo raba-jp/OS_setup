@@ -5,7 +5,13 @@
 
 - name: Install dependencies
   apt:
-    name: build-essential
+    name: "{{ item }}"
     state: present
     autoclean: yes
     autoremove: yes
+  with_items:
+    - build-essential
+    - curl
+    - libssl-dev
+    - libreadline-dev
+    - zlib1g-dev
