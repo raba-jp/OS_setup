@@ -13,7 +13,6 @@ homebrew_packages:
   - heroku
   - mas
   - node
-  - ruby
 
 homebrew_cask_packages:
   - alfred
