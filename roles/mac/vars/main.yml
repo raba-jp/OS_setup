@@ -33,8 +33,6 @@ default_homebrew_packages:
   - neovim
   - peco
   - pip-completion
-  - python
-  - python3
   - rails-completion
   - rake-completion
   - ruby-completion

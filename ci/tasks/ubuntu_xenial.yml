@@ -24,10 +24,6 @@ run:
               fish \
               git \
               ansible \
-              python-dev \
-              python-pip \
-              python3-dev \
-              python3-pip \
               ruby2.3 \
               ruby2.3-dev
       EOF
