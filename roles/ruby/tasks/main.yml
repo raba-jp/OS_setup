@@ -1,4 +1,7 @@
 ---
+- include_tasks: ubuntu.yml
+  when: ansible_os_family == "Debian"
+
 - name: Install rbenv
   git:
     repo: https://github.com/sstephenson/rbenv.git

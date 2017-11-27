@@ -1,0 +1,11 @@
+---
+- name: Update cache
+  apt:
+    update_cache: yes
+
+- name: Install dependencies
+  apt:
+    name: build-essential
+    state: present
+    autoclean: yes
+    autoremove: yes
