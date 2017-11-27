@@ -24,10 +24,6 @@ jobs:
       - get: repository
         trigger: true
       - aggregate:
-        - task: Go
-          file: repository/ci/tasks/role.yml
-          params:
-            ROLE_NAME: go
         - task: Python
           file: repository/ci/tasks/role.yml
           params:
@@ -40,6 +36,19 @@ jobs:
           file: repository/ci/tasks/role.yml
           params:
             ROLE_NAME: rust
+  - name: Go role
+    plan:
+      - get: repository
+        trigger: true
+      - aggregate:
+        - task: Mac
+          file: repository/ci/tasks/role_mac.yml
+          params:
+            ROLE_NAME: go
+        - task: Ubuntu 16.04
+          file: repository/ci/tasks/role.yml
+          params:
+            ROLE_NAME: go
   - name: commons role
     plan:
       - get: repository

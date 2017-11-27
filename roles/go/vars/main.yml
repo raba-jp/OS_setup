@@ -1,2 +1,3 @@
 ---
+go_version: 1.9
 gopath: "{{ ansible_user_dir }}/Development"
