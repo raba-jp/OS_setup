@@ -6,59 +6,78 @@ resources:
       uri: https://github.com/raba-jp/OS_Setup
 
 jobs:
-  - name: OS roles
+  - name: Ubuntu
+    plan:
+      - get: repository
+        trigger: true
+      - task: run
+        file: repository/ci/tasks/role.yml
+        params:
+          ROLE_NAME: ubuntu
+  - name: macOS
+    serial_groups: [ homebrew ]
     plan:
       - get: repository
         trigger: true
       - aggregate:
-        - task: Ubuntu 16.04
-          file: repository/ci/tasks/role.yml
-          params:
-            ROLE_NAME: ubuntu
-        - task: macOS
+        - task: run
           file: repository/ci/tasks/role_mac.yml
           params:
             ROLE_NAME: mac
-  - name: Language roles
+  - name: Go
+    serial_groups: [ homebrew ]
     plan:
       - get: repository
         trigger: true
       - aggregate:
-        - task: Ruby
+        - task: Mac
+          file: repository/ci/tasks/role_mac.yml
+          params:
+            ROLE_NAME: go
+        - task: Ubuntu 16.04
           file: repository/ci/tasks/role.yml
           params:
-            ROLE_NAME: ruby
-        - task: Rust
+            ROLE_NAME: go
+  - name: Python
+    serial_groups: [ homebrew ]
+    plan:
+      - get: repository
+        trigger: true
+      - aggregate:
+        - task: Mac
+          file: repository/ci/tasks/role_mac.yml
+          params:
+            ROLE_NAME: python
+        - task: Ubuntu 16.04
+          file: repository/ci/tasks/role.yml
+          params:
+            ROLE_NAME: python
+  - name: Ruby
+    plan:
+      - get: repository
+        trigger: true
+      - task: Mac
+        file: repository/ci/tasks/role_mac.yml
+        params:
+          ROLE_NAME: ruby
+      - task: Ubuntu 16.04
+        file: repository/ci/tasks/role.yml
+        params:
+          ROLE_NAME: ruby
+  - name: Rust
+    plan:
+      - get: repository
+        trigger: true
+      - aggregate:
+        - task: Mac
+          file: repository/ci/tasks/role_mac.yml
+          params:
+            ROLE_NAME: rust
+        - task: Ubuntu 16.04
           file: repository/ci/tasks/role.yml
           params:
             ROLE_NAME: rust
-  - name: Go role
-    plan:
-      - get: repository
-        trigger: true
-      - aggregate:
-        - task: Mac
-          file: repository/ci/tasks/role_mac.yml
-          params:
-            ROLE_NAME: go
-        - task: Ubuntu 16.04
-          file: repository/ci/tasks/role.yml
-          params:
-            ROLE_NAME: go
-  - name: Python role
-    plan:
-      - get: repository
-        trigger: true
-      - aggregate:
-        - task: Mac
-          file: repository/ci/tasks/role_mac.yml
-          params:
-            ROLE_NAME: python
-        - task: Ubuntu 16.04
-          file: repository/ci/tasks/role.yml
-          params:
-            ROLE_NAME: python
-  - name: commons role
+  - name: commons
     plan:
       - get: repository
         trigger: true
@@ -71,9 +90,13 @@ jobs:
       - get: repository
         trigger: true
         passed:
-          - OS roles
-          - Language roles
-          - commons role
+          - Ubuntu
+          - macOS
+          - Go
+          - Python
+          - Rust
+          - Ruby
+          - commons
       - task: ubuntu personal
         file: repository/ci/tasks/main_ubuntu.yml
         params:
