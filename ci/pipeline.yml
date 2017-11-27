@@ -77,6 +77,20 @@ jobs:
           file: repository/ci/tasks/role.yml
           params:
             ROLE_NAME: rust
+  - name: fish
+    serial_groups: [ homebrew ]
+    plan:
+      - get: repository
+        trigger: true
+      - aggregate:
+        - task: Mac
+          file: repository/ci/tasks/role_mac.yml
+          params:
+            ROLE_NAME: fish
+        - task: Ubuntu 16.04
+          file: repository/ci/tasks/role.yml
+          params:
+            ROLE_NAME: fish
   - name: commons
     plan:
       - get: repository

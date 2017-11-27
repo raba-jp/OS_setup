@@ -18,10 +18,8 @@ run:
       RUN apt-get update && \
             apt-get install -y software-properties-common && \
             apt-add-repository ppa:ansible/ansible && \
-            apt-add-repository ppa:fish-shell/release-2 && \
             apt-get update && \
             apt-get install -y \
-              fish \
               git \
               ansible \
               ruby2.3 \
