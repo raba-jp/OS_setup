@@ -333,7 +333,7 @@ jobs:
                   - title: ID
                     value: $BUILD_NAME
                     short: true
-  - name: Personal
+  - name: All
     serial_groups: [ homebrew ]
     plan:
       - get: repository
@@ -349,93 +349,10 @@ jobs:
           - Minio
           - commons
       - aggregate:
-        - task: darwin personal
+        - task: darwin
           file: repository/ci/tasks/main_darwin.yml
-          params:
-            STAGE: personal
-        - task: ubuntu personal
+        - task: ubuntu
           file: repository/ci/tasks/main_ubuntu.yml
-          params:
-            STAGE: personal
-        on_failure:
-          put: slack
-          params:
-            channel: '#notification'
-            username: Concourse CI
-            icon_emoji: ":concourse:"
-            attachments:
-              - color: "#ff0000"
-                title: " $BUILD_TEAM_NAME/$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME #$BUILD_NAME FAILED"
-                title_link: http://localhost:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME
-                fields:
-                  - title: Team
-                    value: $BUILD_TEAM_NAME
-                    short: true
-                  - title: Pipeline
-                    value: $BUILD_PIPELINE_NAME
-                    short: true
-                  - title: Job Name
-                    value: $BUILD_JOB_NAME
-                    short: true
-                  - title: ID
-                    value: $BUILD_NAME
-                    short: true
-
-  - name: Work
-    serial_groups: [ homebrew ]
-    plan:
-      - get: repository
-        trigger: true
-        passed:
-          - Ubuntu
-          - macOS
-          - Go
-          - Python
-          - Rust
-          - Ruby
-          - fish
-          - Minio
-          - commons
-      - aggregate:
-        - task: ubuntu work
-          file: repository/ci/tasks/main_ubuntu.yml
-          params:
-            STAGE: work
-        - task: darwin work
-          file: repository/ci/tasks/main_darwin.yml
-          params:
-            STAGE: work
-        on_failure:
-          put: slack
-          params:
-            channel: '#notification'
-            username: Concourse CI
-            icon_emoji: ":concourse:"
-            attachments:
-              - color: "#ff0000"
-                title: " $BUILD_TEAM_NAME/$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME #$BUILD_NAME FAILED"
-                title_link: http://localhost:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME
-                fields:
-                  - title: Team
-                    value: $BUILD_TEAM_NAME
-                    short: true
-                  - title: Pipeline
-                    value: $BUILD_PIPELINE_NAME
-                    short: true
-                  - title: Job Name
-                    value: $BUILD_JOB_NAME
-                    short: true
-                  - title: ID
-                    value: $BUILD_NAME
-                    short: true
-
-  - name: Complete
-    plan:
-      - get: repository
-        trigger: true
-        passed:
-          - Personal
-          - Work
       - put: slack
         params:
           channel: '#notification'
@@ -452,3 +369,26 @@ jobs:
                 - title: Pipeline
                   value: $BUILD_PIPELINE_NAME
                   short: true
+        on_failure:
+          put: slack
+          params:
+            channel: '#notification'
+            username: Concourse CI
+            icon_emoji: ":concourse:"
+            attachments:
+              - color: "#ff0000"
+                title: " $BUILD_TEAM_NAME/$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME #$BUILD_NAME FAILED"
+                title_link: http://localhost:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME
+                fields:
+                  - title: Team
+                    value: $BUILD_TEAM_NAME
+                    short: true
+                  - title: Pipeline
+                    value: $BUILD_PIPELINE_NAME
+                    short: true
+                  - title: Job Name
+                    value: $BUILD_JOB_NAME
+                    short: true
+                  - title: ID
+                    value: $BUILD_NAME
+                    short: true

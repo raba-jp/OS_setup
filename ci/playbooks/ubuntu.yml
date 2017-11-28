@@ -1,9 +1,0 @@
----
-- name: Run ubuntu role
-  hosts: all
-  connection: local
-  vars_files:
-    - ../../vars/{{ stage }}.yml
-    - ../../roles/ubuntu/vars/main.yml
-  tasks:
-    - include_tasks: '../../roles/ubuntu/tasks/main.yml'

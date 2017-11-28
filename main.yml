@@ -3,7 +3,7 @@
   hosts: all
   connection: local
   vars_files:
-    - vars/{{ stage }}.yml
+    - vars/main.yml
   roles:
     - role: mac
       tags:
