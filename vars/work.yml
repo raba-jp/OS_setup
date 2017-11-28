@@ -4,6 +4,7 @@ directories: []
 git_repositories: []
 symlinks: []
 variables: []
+apt_packages: []
 homebrew_taps: []
 homebrew_packages:
   - nodenv
