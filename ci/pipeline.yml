@@ -15,6 +15,10 @@ resources:
     type: slack-notification
     source:
       url: {{slack_webhook_url}}
+  - name: timer
+    type: time
+    source:
+      interval: 6h
 
 jobs:
   - name: Ubuntu
@@ -337,7 +341,6 @@ jobs:
     serial_groups: [ homebrew ]
     plan:
       - get: repository
-        trigger: true
         passed:
           - Ubuntu
           - macOS
@@ -348,6 +351,8 @@ jobs:
           - fish
           - Minio
           - commons
+      - get: timer
+        trigger: true
       - aggregate:
         - task: darwin
           file: repository/ci/tasks/main_darwin.yml
