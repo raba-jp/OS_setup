@@ -11,10 +11,10 @@
     repo: "{{ item.repo }}"
     dest: "{{ item.dest }}"
     accept_hostkey: yes
-  with_items: "{{ default_git_repositories + git_repositories }}"
+  with_items: "{{ git_repositories }}"
 
 - name: Create Symlink
   shell: |
     rm -rf {{ item.dest }}; \
     ln -s {{ item.src }} {{ item.dest }}
-  with_items: "{{ default_symlinks + symlinks }}"
+  with_items: "{{ symlinks }}"
