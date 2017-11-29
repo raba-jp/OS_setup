@@ -359,7 +359,7 @@ jobs:
           username: Concourse CI
           icon_emoji: ":concourse:"
           attachments:
-            - color: "#228b22"
+            - color: "#00ff00"
               title: " $BUILD_TEAM_NAME/$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME #$BUILD_NAME COMPLETE"
               title_link: http://localhost:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME
               fields:
