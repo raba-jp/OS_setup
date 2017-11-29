@@ -5,7 +5,7 @@
 
 - name: Install Python
   homebrew:
-    name: python
+    name: "{{ item }}"
     state: present
   with_items:
     - python
