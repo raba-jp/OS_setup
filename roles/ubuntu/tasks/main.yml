@@ -9,4 +9,4 @@
     state: present
     autoclean: yes
     autoremove: yes
-  with_items: "{{ default_apt_packages + apt_packages }}"
+  with_items: "{{ apt_packages }}"
