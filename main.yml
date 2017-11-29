@@ -34,3 +34,6 @@
       tags:
         - rust
         - language
+    - role: fish
+      tags:
+        - fish
