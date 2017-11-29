@@ -53,4 +53,4 @@
     state: "{{ item.state | default('latest') }}"
     executable: "{{ xdg_data_home }}/rbenv/shims/gem"
     user_install: no
-  with_items: "{{ default_ruby_packages + ruby_packages }}"
+  with_items: "{{ ruby_packages }}"

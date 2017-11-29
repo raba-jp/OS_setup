@@ -1,6 +1,5 @@
 ---
 xdg_data_home: "{{ ansible_user_dir }}/.local/share"
 
-ruby_packages: []
 python2_packages: []
 python3_packages: []

@@ -1,4 +1,4 @@
 ---
 ruby_version: 2.4.2
-default_ruby_packages:
+ruby_packages:
   - neovim
