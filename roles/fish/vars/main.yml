@@ -1,5 +1,5 @@
 ---
-default_variables:
+variables:
   - name: XDG_CONFIG_HOME
     value: $HOME/.config
   - name: XDG_CACHE_HOME

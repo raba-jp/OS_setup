@@ -1,8 +1,6 @@
 ---
 xdg_data_home: "{{ ansible_user_dir }}/.local/share"
 
-variables: []
-
 homebrew_taps: []
 
 apt_packages: []

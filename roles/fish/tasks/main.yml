@@ -6,7 +6,7 @@
   when: ansible_os_family == "Darwin"
 
 - include_tasks: variables.yml
-  with_items: "{{ default_variables + variables }}"
+  with_items: "{{ variables }}"
 
 - name: Erase fish_user_path
   shell: fish --command 'set --erase fish_user_paths'
