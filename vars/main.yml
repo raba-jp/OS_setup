@@ -9,19 +9,6 @@ variables: []
 homebrew_taps: []
 
 apt_packages: []
-homebrew_packages:
-  - heroku
-  - mas
-  - node
-
-homebrew_cask_packages:
-  - alfred
-  - android-studio
-  - bartender
-  - clipy
-  - dash
-  - mplayerx
-  - music-manager
 
 ruby_packages: []
 python2_packages: []
