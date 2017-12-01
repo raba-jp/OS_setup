@@ -9,6 +9,4 @@ run:
     - -c
     - |
       export PATH=/usr/local/bin:$PATH
-      ansible-playbook \
-        -i inventories/${STAGE} \
-        main.yml
+      ansible-playbook -i inventory main.yml

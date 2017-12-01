@@ -12,6 +12,4 @@ run:
   args:
     - -c
     - |
-      ansible-playbook \
-        -i inventories/${STAGE} \
-        main.yml
+      ansible-playbook -i inventory main.yml
