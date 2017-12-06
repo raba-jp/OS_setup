@@ -236,6 +236,43 @@ jobs:
                     value: $BUILD_NAME
                     short: true
 
+  - name: Node.js
+    plan:
+      - get: repository
+        trigger: true
+      - aggregate:
+        - task: Mac
+          file: repository/ci/tasks/role_mac.yml
+          params:
+            ROLE_NAME: node
+        - task: Ubuntu 16.04
+          file: repository/ci/tasks/role.yml
+          params:
+            ROLE_NAME: node
+        on_failure:
+          put: slack
+          params:
+            channel: '#notification'
+            username: Concourse CI
+            icon_emoji: ":concourse:"
+            attachments:
+              - color: "#ff0000"
+                title: " $BUILD_TEAM_NAME/$BUILD_PIPELINE_NAME/$BUILD_JOB_NAME #$BUILD_NAME FAILED"
+                title_link: http://localhost:8080/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME
+                fields:
+                  - title: Team
+                    value: $BUILD_TEAM_NAME
+                    short: true
+                  - title: Pipeline
+                    value: $BUILD_PIPELINE_NAME
+                    short: true
+                  - title: Job Name
+                    value: $BUILD_JOB_NAME
+                    short: true
+                  - title: ID
+                    value: $BUILD_NAME
+                    short: true
+
   - name: fish
     serial_groups: [ homebrew ]
     plan:
@@ -348,6 +385,7 @@ jobs:
           - Python
           - Rust
           - Ruby
+          - Node.js
           - fish
           - Minio
           - commons

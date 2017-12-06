@@ -30,6 +30,8 @@ variables:
     value: $XDG_DATA_HOME/rustup
   - name: RBENV_ROOT
     value: $XDG_DATA_HOME/rbenv
+  - name: NODENV_ROOT
+    value: $XDG_DATA_HOME/nodenv
 
 paths:
   - $GOPATH/bin
@@ -37,3 +39,4 @@ paths:
   - $ANDROID_SDK_PLATFORM_TOOLS
   - $CARGO_HOME/bin
   - $RBENV_ROOT/bin
+  - $NODENV_ROOT/bin

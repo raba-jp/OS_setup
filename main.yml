@@ -34,6 +34,10 @@
       tags:
         - rust
         - language
+    - role: node
+      tags:
+        - node
+        - language
     - role: fish
       tags:
         - fish
