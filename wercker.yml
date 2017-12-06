@@ -25,6 +25,11 @@ plan:
         name: terraform plan
         code: |
           terraform plan
+  after-steps:
+    - slack-notifier:
+        url: $SLACK_WEBHOOK_URL
+        channel: notifications
+        username: Wercker
 apply:
   steps:
     - script:
@@ -51,3 +56,8 @@ apply:
         name: terraform apply
         code: |
           terraform apply
+  after-steps:
+    - slack-notifier:
+        url: $SLACK_WEBHOOK_URL
+        channel: notifications
+        username: Wercker
