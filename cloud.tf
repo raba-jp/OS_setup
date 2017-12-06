@@ -5,3 +5,9 @@ terraform {
     region = "us-east-2"
   }
 }
+
+variable "digitalocean_token" {}
+
+provider "digitalocean" {
+  token = "${var.digitalocean_token}"
+}
