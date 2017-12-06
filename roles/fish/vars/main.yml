@@ -28,9 +28,12 @@ variables:
     value: $XDG_DATA_HOME/cargo
   - name: RUSTUP_HOME
     value: $XDG_DATA_HOME/rustup
+  - name: RBENV_ROOT
+    value: $XDG_DATA_HOME/rbenv
 
 paths:
   - $GOPATH/bin
   - $ANDROID_SDK_TOOLS/bin
   - $ANDROID_SDK_PLATFORM_TOOLS
   - $CARGO_HOME/bin
+  - $RBENV_ROOT/bin
