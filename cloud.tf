@@ -30,3 +30,23 @@ provider "google" {
   project     = "${var.google_project}"
   region      = "${var.google_region}"
 }
+
+resource "google_compute_instance" "main" {
+  name         = "main"
+  machine_type = "f1-micro"
+  zone         = "us-east1-b"
+
+  boot_disk {
+    initialize_params {
+      image = "ubuntu-os-cloud/ubuntu-1604-lts"
+    }
+  }
+
+  network_interface {
+    network = "default"
+  }
+
+  service_account {
+    scopes = ["compute-rw"]
+  }
+}
