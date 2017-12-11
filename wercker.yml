@@ -26,8 +26,10 @@ plan:
         code: |
           terraform plan
   after-steps:
-    - slack-notifier:
-        url: $SLACK_WEBHOOK_URL
+    - install-packages:
+        packages: ruby
+    - wantedly/pretty-slack-notify:
+        webhook_url: $SLACK_WEBHOOK_URL
         channel: notifications
         username: Wercker
 apply:
@@ -57,7 +59,9 @@ apply:
         code: |
           terraform apply
   after-steps:
-    - slack-notifier:
-        url: $SLACK_WEBHOOK_URL
+    - install-packages:
+        packages: ruby
+    - wantedly/pretty-slack-notify:
+        webhook_url: $SLACK_WEBHOOK_URL
         channel: notifications
         username: Wercker
