@@ -31,6 +31,13 @@ provider "google" {
   region      = "${var.google_region}"
 }
 
+resource "digitalocean_droplet" "main" {
+	image = "ubuntu-16-04-x64"
+	name = "main"
+	region = "sgp1"
+	size = "1gb"
+}
+
 resource "google_compute_instance" "main" {
   name         = "main"
   machine_type = "f1-micro"
