@@ -1,0 +1,9 @@
+---
+os:
+  - osx
+before_install:
+    - brew update
+    - brew install python
+    - brew install ansible
+script:
+  - ansible-playbook -i inventory main.yml
