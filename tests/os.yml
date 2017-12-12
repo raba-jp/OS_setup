@@ -1,6 +1,0 @@
----
-- name: Test role
-  hosts: all
-  tasks:
-    - include: '../roles/os/tasks/main.yml'
-      static: yes
