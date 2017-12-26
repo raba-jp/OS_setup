@@ -1,0 +1,13 @@
+---
+- name: Check install binary
+  stat:
+    path: "{{ gopath }}/bin/{{ item.name }}"
+  register: installed
+  ignore_errors: True
+
+  
+- name: Install package
+  shell: "go get -u {{ item.uri }}"
+  environment:
+    GOPATH: "{{ gopath }}"
+  when: not installed.stat.exists
