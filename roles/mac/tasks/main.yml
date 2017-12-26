@@ -16,14 +16,6 @@
     install_options: "{{ item.install_options | default('') }}"
   with_items: "{{ homebrew_packages }}"
 
-- name: Create Caskroom directory
-  file:
-    path: /usr/local/Caskroom
-    state: directory
-    owner: sakuraba
-    group: admin
-    mode: 0755
-
 - name: Install homebrew cask packages
   homebrew_cask:
     name: "{{ item }}"
