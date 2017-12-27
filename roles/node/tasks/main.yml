@@ -48,5 +48,6 @@
   npm:
     name: "{{ item.name | default(item) }}"
     state: "{{ item.state | default('latest') }}"
+    global: yes
     executable: "{{ xdg_data_home }}/nodenv/shims/npm"
   with_items: "{{ node_packages }}"
