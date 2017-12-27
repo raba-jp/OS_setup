@@ -51,3 +51,8 @@
     global: yes
     executable: "{{ xdg_data_home }}/nodenv/shims/npm"
   with_items: "{{ node_packages }}"
+
+- name: nodenv rehash
+  shell: |
+    NODENV_ROOT={{ xdg_data_home }}/nodenv \
+    {{ xdg_data_home }}/nodenv/bin/nodenv rehash
