@@ -7,8 +7,6 @@ homebrew_taps:
   - neovim/neovim
   - go-delve/delve
   - c-bata/kube-prompt
-  - aereal/mackerelappactivity
-  - mackerelio/mackerel-agent
 
 homebrew_packages:
   - bash-completion
@@ -32,7 +30,6 @@ homebrew_packages:
   - kubernetes-helm
   - nkf
   - less
-  - mackerel-agent
   - neovim
   - peco
   - pip-completion
@@ -62,7 +59,6 @@ homebrew_cask_packages:
   - google-chrome
   - google-cloud-sdk
   - inkdrop
-  - mackerelappactivity
   - mplayerx
   - music-manager
   - quicklook-csv
