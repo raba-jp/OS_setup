@@ -6,3 +6,4 @@ ruby_packages:
   - rubocop
   - reek
   - rails_best_practices
+  - rufo
