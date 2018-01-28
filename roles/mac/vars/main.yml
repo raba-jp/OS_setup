@@ -15,7 +15,6 @@ homebrew_packages:
   - bundler-completion
   - cargo-completion
   - ctags
-  - docker-completion
   - docker-compose-completion
   - exa
   - fd
@@ -51,7 +50,6 @@ homebrew_cask_packages:
   - alfred
   - android-studio
   - bartender
-  - betterzipql
   - clipy
   - dash
   - docker
