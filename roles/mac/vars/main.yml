@@ -56,7 +56,9 @@ homebrew_cask_packages:
   - font-myrica
   - google-chrome
   - google-cloud-sdk
+  - hyperswitch
   - inkdrop
+  - kitty
   - mplayerx
   - music-manager
   - quicklook-csv
