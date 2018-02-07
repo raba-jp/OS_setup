@@ -7,3 +7,4 @@ ruby_packages:
   - reek
   - rails_best_practices
   - rufo
+  - solargraph
