@@ -1,12 +1,12 @@
 ---
 homebrew_taps:
-  - homebrew/dupes
   - homebrew/services
   - caskroom/cask
   - caskroom/fonts
   - neovim/neovim
   - go-delve/delve
   - c-bata/kube-prompt
+  - wata727/tflint
 
 homebrew_packages:
   - bash-completion
@@ -39,6 +39,7 @@ homebrew_packages:
   - rustc-completion
   - terminal-notifier
   - terraform
+  - tflint
   - sshrc
   - the_silver_searcher
   - tig
@@ -53,6 +54,7 @@ homebrew_cask_packages:
   - clipy
   - dash
   - docker
+  - font-cica
   - font-myrica
   - google-chrome
   - google-cloud-sdk
