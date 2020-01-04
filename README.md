@@ -1,6 +1,6 @@
 # macOS_setup
 
-# Notice
+## Notice
 This repository merged into [dotfiles](https://github.com/raba-jp/dotfiles)
 
 [![Build Status](https://travis-ci.org/rabafea/OS_setup.svg?branch=master)](https://travis-ci.org/rabafea/OS_setup)
