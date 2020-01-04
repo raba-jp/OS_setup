@@ -1,5 +1,8 @@
 # macOS_setup
 
+# Notice
+This repository merged to [dotfiles](https://github.com/raba-jp/dotfiles)
+
 [![Build Status](https://travis-ci.org/rabafea/OS_setup.svg?branch=master)](https://travis-ci.org/rabafea/OS_setup)
 
 ## Install homebrew
